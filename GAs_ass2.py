@@ -10,7 +10,6 @@ all_input_file = []
 fitness_array = []
 roulette = []
 
-
 def generate_population(degree):
     population.clear()
     for i in range(number_of_population):
@@ -18,7 +17,6 @@ def generate_population(degree):
         for j in range(degree + 1):
             chromosome.append(round(rn.uniform(-10, 10), 2))
         population.append(chromosome)
-
 
 def read_file():
     listFile = []
@@ -78,7 +76,6 @@ def cross_over(indx1, indx2, degree):
         for i in range(R2, degree):
             population[indx1][i], population[indx2][i] = population[indx2][i], population[indx1][i]
 
-
 def mutation(poprow, degree, t, T):
     LB = -10
     UB = 10
@@ -98,7 +95,6 @@ def mutation(poprow, degree, t, T):
             population[poprow][i] = population[poprow][i] - Delta
         else:
             population[poprow][i] = Delta - population[poprow][i]
-
 
 def get_points(n):
     X = []
