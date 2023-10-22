@@ -76,7 +76,7 @@ def cross_over(indx1, indx2, degree):
         for i in range(R2, degree):
             population[indx1][i], population[indx2][i] = population[indx2][i], population[indx1][i]
 
-def mutation(poprow, degree, t, T):
+def mutation(poprow, degree, index_of_generation, number_of_generation):
     LB = -10
     UB = 10
 
@@ -90,7 +90,7 @@ def mutation(poprow, degree, t, T):
             y = DU
         r = rn.uniform(0, 1)
         b = rn.randint(1, 5)
-        Delta = y * (1 - pow(r, ((1 - t) / T) ** b))
+        Delta = y * (1 - pow(r, ((1 - index_of_generation) / number_of_generation) ** b))
         if y == Dl:
             population[poprow][i] = population[poprow][i] - Delta
         else:
