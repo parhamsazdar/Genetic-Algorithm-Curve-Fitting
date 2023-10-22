@@ -2,7 +2,7 @@ import random as rn
 import matplotlib.pyplot as plt
 
 
-input_file_path = "input-2.txt"
+input_file_path = "input.txt"
 population = []
 number_of_population = 100
 number_of_generation = 10
